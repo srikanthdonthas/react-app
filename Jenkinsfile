@@ -18,9 +18,9 @@ pipeline {
         stage('serving'){
             steps{
                 echo 'installing serve via npm'
-                cmd 'npm install -g serve'
+                sh 'npm install -g serve'
                 echo 'ready to serve'
-                sh 'serve -s build'
+                git 'serve -s build'
             }
         }
         stage('Home page'){

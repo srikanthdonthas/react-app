@@ -6,7 +6,7 @@ pipeline {
                 echo 'started'
                 sh 'npm install' 
                 sh 'ls'
-                sh 'mkdir C:\Users\%username%\Desktop\DSK'
+                sh 'mkdir C:/Users/%username%/Desktop/DSK'
                 sh 'ls'
             }
         }

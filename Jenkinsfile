@@ -6,6 +6,8 @@ pipeline {
                 echo 'started'
                 sh 'npm install' 
                 sh 'ls'
+                sh '`npm run-script build'
+                sh 'ls'
             }
         }
     }

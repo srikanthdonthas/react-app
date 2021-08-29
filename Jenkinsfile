@@ -8,7 +8,6 @@ pipeline {
                 sh 'ls'
                 sh 'mkdir C:\Users\%username%\Desktop\DSK'
                 sh 'ls'
-
             }
         }
     }

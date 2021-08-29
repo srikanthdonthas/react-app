@@ -1,13 +1,25 @@
 pipeline {
     agent any
     stages {
-        stage('Build') { 
+        stage(' node packages') { 
             steps {
                 echo 'started'
                 sh 'npm install' 
-                sh 'ls'
-                cmd 'mkdir /%username%\Desktop\DSK'
-                sh 'ls'
+                echo 'installed node packages'
+            }
+            steps('Production build'){
+                echo 'making production build'
+                sh 'npm run build'
+                echo 'build process is done'
+            }
+            steps('serving'){
+                echo 'installing serve via npm'
+                sh 'npm install -g serve'
+                echo 'ready to serve'
+                sh 'serve -s build'
+            }
+            steps('Home page'){
+                echo 'check at http://localhost:5000'
             }
         }
     }

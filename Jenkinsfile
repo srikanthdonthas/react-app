@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'started'
                 sh 'npm install' 
+                sh 'ls'
             }
         }
     }

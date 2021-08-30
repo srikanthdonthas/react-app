@@ -20,7 +20,7 @@ pipeline {
                 echo 'installing serve via npm'
                 sh 'npm install -g serve'
                 echo 'ready to serve'
-                powershell 'serve -s build'
+                sh 'serve -s build'
             }
         }
         stage('Home page'){

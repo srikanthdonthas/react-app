@@ -7,7 +7,7 @@ pipeline {
                 sh '''
                 ls
                 pwd
-                rm -rf $JENKINS_HOME/workspace/*
+                rm -rf C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\*
                 ls
                 ''' 
             }

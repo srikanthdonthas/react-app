@@ -7,7 +7,7 @@ pipeline {
                 sh '''
                 ls
                 pwd
-                rm rf $JENKINS_HOME/workspace/*
+                rm -rf $JENKINS_HOME/workspace/*
                 ls
                 ''' 
             }

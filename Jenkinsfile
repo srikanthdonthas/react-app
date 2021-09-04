@@ -8,7 +8,7 @@ pipeline {
                 ls
                 pwd
                 cd ..
-                rm -rf *
+                rm -rf react-app@tmp test workspaces.txt
                 ls
                 ''' 
             }

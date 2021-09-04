@@ -6,7 +6,7 @@ pipeline {
                 echo 'started'
                 sh ''''
                 ls
-                rm rf $JENKINS_HOME/workspace/*
+                pdw
                 ls
                 ''' 
             }

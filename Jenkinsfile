@@ -1,31 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('node packages') { 
+        stage('Removed files') { 
             steps {
                 echo 'started'
-                sh 'npm install' 
-                echo 'installed node packages'
-            }
-        }
-        stage('Production build'){
-            steps{
-                echo 'making production build'
-                sh 'npm run build'
-                echo 'build process is done'
-            }
-        }
-        stage('serving'){
-            steps{
-                echo 'installing serve via npm'
-                sh 'npm install -g serve'
-                echo 'ready to serve'
-                sh 'serve -s build'
-            }
-        }
-        stage('Home page'){
-            steps{
-                echo 'check at http://localhost:5000'
+                sh ''''
+                ls
+                rm rf $JENKINS_HOME/workspace/*
+                ls
+                ''' 
             }
         }
     }

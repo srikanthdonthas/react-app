@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('node packages') { 
+        stage('packages') { 
             steps {
             sh'pwd'
             }
